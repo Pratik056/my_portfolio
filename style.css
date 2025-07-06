@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    font-family: "urbanist";
+    background-color: #F8F7F3;
+}
+
+.padding{
+    padding: 0 24rem;
+}
+
+.flex{
+    display: flex;
+}
+
+h1{
+    font-size: 80px;
+}
+
+#active{
+    padding: 0.8rem 2rem;
+    border-radius: 6rem;
+    background-color: #358753;
+    color: white;
+}
+#active:hover{
+    background-color: #49ad6d;
+    transition: 0.5s ease-in-out;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: 1px solid grey;
+    z-index: 100;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 0 1rem;
+    color: black;
+}
+
+
+.arrow{
+    position: relative;
+    bottom: -25%;
+    animation: down linear infinite;
+}
+
+@keyframes down{
+    0%{
+        bottom: -25%;
+    }
+    25%{
+        bottom: -24%;
+    }
+    50%{
+        bottom: -25%;
+    }
+    75%{
+        bottom: -24%;
+    }
+    100%{
+        bottom: -25%;
+    }
+}
+
+.hero-section, .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+.hero-section h1{
+    font-weight: 400;
+}
+
+.hero-section_intro{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.hero-section_intro h1{
+    color: #5D5D5D;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.star{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about_intro{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about_intro img{
+    height: 64px;
+}
+
+.about p{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+
+
