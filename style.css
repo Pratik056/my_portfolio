@@ -52,20 +52,14 @@ nav a{
 .arrow{
     position: relative;
     bottom: -25%;
-    animation: down linear infinite;
+    animation: 2s down linear infinite;
 }
 
 @keyframes down{
     0%{
         bottom: -25%;
     }
-    25%{
-        bottom: -24%;
-    }
     50%{
-        bottom: -25%;
-    }
-    75%{
         bottom: -24%;
     }
     100%{
@@ -93,7 +87,6 @@ nav a{
 
 .hero-section_intro h1{
     color: #5D5D5D;
-    font-size: 80px;
     font-weight: 700;
 }
 
@@ -101,6 +94,10 @@ nav a{
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+}
+
+#star1{
+    
 }
 
 .about_intro{
@@ -117,6 +114,7 @@ nav a{
     font-size: 2rem;
     margin-top: 0.5rem;
     text-align: center;
+    width: 60%;
 }
 
 
