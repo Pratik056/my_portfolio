@@ -51,15 +51,20 @@ nav a{
 
 .arrow{
     position: relative;
-    bottom: -25%;
-    animation: 2s down linear infinite;
+    animation: 3s down linear infinite;
 }
 
 @keyframes down{
     0%{
         bottom: -25%;
     }
+    25%{
+        bottom: -24%;
+    }
     50%{
+        bottom: -25%;
+    }
+    75%{
         bottom: -24%;
     }
     100%{
@@ -97,7 +102,24 @@ nav a{
 }
 
 #star1{
-    
+    animation: star-rotate 6s linear infinite;
+}
+#star2{
+    animation: star-rotate 6s linear 1.5s infinite;
+}
+#star3{
+    animation: star-rotate 6s linear 3s infinite;
+}
+@keyframes star-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .about_intro{
