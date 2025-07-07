@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('./fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+       url('./fonts/ClashGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
     margin: 0;
-    font-family: "urbanist";
+    font-family: "Urbanist";
     background-color: #F8F7F3;
     scroll-behavior: smooth;
 }
@@ -19,13 +27,15 @@ h1{
     font-size: 80px;
 }
 
-#active{
-    padding: 0.8rem 2rem;
+.active{
+    padding: 1rem 0;
+    width: 6rem;
     border-radius: 6rem;
     background-color: #358753;
     color: white;
+    text-align: center;
 }
-#active:hover{
+.active:hover{
     background-color: #49ad6d;
     transition: 0.5s ease-in-out;
 }
@@ -39,7 +49,7 @@ nav{
     padding: 0.5rem 0;
     margin-top: 1rem;
     font-size: 1rem;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     z-index: 1000;
 }
 
@@ -47,6 +57,7 @@ nav a{
     text-decoration: none;
     padding: 0 1rem;
     color: black;
+    transition: all 0.4s ease;
 }
 
 
