@@ -11,7 +11,6 @@
 *{
     margin: 0;
     font-family: "Urbanist";
-    background-color: #F8F7F3;
     scroll-behavior: smooth;
 }
 
@@ -28,8 +27,8 @@ h1{
 }
 
 .active{
-    padding: 1rem 0;
-    width: 6rem;
+    padding: 1rem 1.5rem;
+    width: 4rem;
     border-radius: 6rem;
     background-color: #358753;
     color: white;
@@ -41,15 +40,28 @@ h1{
 }
 
 nav{
-    position: sticky;
-    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 0;
     margin-top: 1rem;
+}
+
+.sticky{
+    position: fixed;
+    top: 4%;
+    z-index: 1000;
+}
+
+.nav-link{
+    padding: 1.5rem 1rem;
     font-size: 1rem;
-    /* border: 1px solid grey; */
+    background-color: #ffff;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 20rem;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -87,12 +99,16 @@ nav a{
     }
 }
 
-.hero-section, .about{
+.full-screen{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+}
+
+.hero-section{
+    background-color: #F8F7F3;
 }
 
 .hero-section h1{
@@ -136,6 +152,10 @@ nav a{
     100%{
         transform: rotate(360deg);
     }
+}
+
+.about{
+    background-color: #fcfcfc;
 }
 
 .about_intro{
