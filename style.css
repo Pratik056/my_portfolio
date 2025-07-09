@@ -76,9 +76,10 @@ nav a{
 .arrow{
     position: relative;
     animation: 3s down linear infinite;
-    bottom: -8rem;
+    bottom: -12rem;
     mix-blend-mode: darken;
     cursor: pointer;
+    width: 3rem;
 }
 
 @keyframes down{

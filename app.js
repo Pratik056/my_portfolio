@@ -1,14 +1,6 @@
 const arrows = document.querySelectorAll('.arrow');
 const navbars = document.querySelectorAll('.navbar');
 
-
-// navbars.forEach(navbar => {
-//   navbar.addEventListener('click', (e) => {
-//     navbars.forEach(nav => nav.classList.remove('active'));
-//     e.currentTarget.classList.add('active');
-//   });
-// });
-
 //changing active nav
 function changeNav(){
   navbars.forEach(navbar => navbar.classList.remove('active'));
@@ -16,3 +8,13 @@ function changeNav(){
 }
 
 navbars.forEach(navbar => navbar.addEventListener('click',changeNav));
+
+arrows.forEach(arrow => arrow.addEventListener('click', () => {
+  navbars.forEach(navbar => navbar.classList.remove('active'));
+
+ document.querySelector('a.navbar[href="#about"]').classList.add('active');
+  // if (aboutLink) {
+  //   aboutLink.classList.add('active');
+  // }
+}));
+
