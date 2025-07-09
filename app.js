@@ -18,3 +18,24 @@ arrows.forEach(arrow => arrow.addEventListener('click', () => {
   // }
 }));
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(`${entry.target.id}`)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      navbars.forEach(navbar => navbar.classList.remove('active'));
+      const navbarLink = document.querySelector(`a.navbar[href='#${entry.target.id}']`);
+      if (navbarLink) {
+        navbarLink.classList.add('active');
+        console.log("pp")
+      }
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+},{
+  threshold: 0.4
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
