@@ -27,14 +27,13 @@ const observer = new IntersectionObserver((entries) => {
       const navbarLink = document.querySelector(`a.navbar[href='#${entry.target.id}']`);
       if (navbarLink) {
         navbarLink.classList.add('active');
-        console.log("pp")
       }
     } else {
       entry.target.classList.remove('show');
     }
   });
 },{
-  threshold: 0.4
+  threshold: 0.7
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
