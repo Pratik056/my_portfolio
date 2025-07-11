@@ -200,6 +200,52 @@ nav a{
     width: 60%;
 }
 
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #358753;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+
+.email p{
+    font-size: 1.5rem;
+}
+
+.email h2{
+    cursor: pointer;
+}
+
+.email:hover{
+    background-color: #358753;
+    color: white;
+    box-shadow: 1px 1px 3px gray;
+    transition: ease-in-out 0.3s ;
+}
+
+.socials{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.socials i{
+    font-size: 2rem;
+    border-radius: 8rem;
+    padding: 1rem;
+    color: #358753;
+    border: 2px solid #358753;
+}
+
+.socials i:hover{
+    background-color: #358753;
+    color: white;
+    transition: ease-in-out 0.3s ;
+}
+
 
 
 

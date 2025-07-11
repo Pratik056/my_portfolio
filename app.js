@@ -33,8 +33,20 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 },{
-  threshold: 0.7
+  threshold: 0.6
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+const copyLine = document.querySelector('.email-address');
+
+copyLine.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyLine.textContent)
+    .then(() => {
+      copyLine.textContent = "Copied";
+      setTimeout(()=>{
+        copyLine.textContent = 'pratiktamrakar56@gmail.com';
+      }, 1000);
+    })
+});
