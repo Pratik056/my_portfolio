@@ -33,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 },{
-  threshold: 0.6
+  threshold: 0.5
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');

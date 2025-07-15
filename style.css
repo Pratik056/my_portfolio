@@ -9,6 +9,7 @@
 
 *{
     margin: 0;
+    padding: 0;
     font-family: "Urbanist";
     scroll-behavior: smooth;
 }
@@ -32,7 +33,17 @@ body{
 }
 
 h1{
-    font-size: 80px;
+    font-size: clamp(4rem, 4vw, 8rem);
+}
+
+.full-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    scroll-snap-align: start;
 }
 
 /* NAVBAR */
@@ -72,7 +83,7 @@ nav{
     background-color: #ffff;
     box-shadow: 1px 1px 5px gray;
     border-radius: 5rem;
-    width: min(155rem, 100%);
+    width: 100%;
 }
 
 nav a{
@@ -119,16 +130,11 @@ nav a{
     }
 }
 
-/* HERO SECTION */
-.full-screen{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    scroll-snap-align: start;
+nav i{
+    opacity: 0;
 }
+
+/* HERO SECTION */
 
 .hero-section{
     position: relative;
@@ -210,8 +216,6 @@ nav a{
 .skills > h2{
     font-size: 2em;
     color: #358753;
-    padding: 1rem 2rem;
-    border-radius: 4rem;
 }
 
 .skills-container{
@@ -279,6 +283,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1.5rem;
 }
@@ -289,7 +294,7 @@ nav a{
     background-color: #358753;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-between;
     text-align: start;
     color: white;
     border-radius: 2rem;
@@ -363,6 +368,118 @@ nav a{
     transition: ease-in-out 0.3s ;
 }
 
+@media screen and (max-width: 1066px) {
+    .skills-container{
+        width: 80%;
+    }
 
+    .project-container{
+        flex-direction: column;
+    }
 
+    .project-card-1{
+        height: 300px;
+        width: 524px;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    nav a{
+        padding: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-link{
+        opacity: 0;
+    }
+    /* nav i{
+        opacity: 1;
+        font-size: 2rem;
+        position: absolute;
+        right: -35%;
+        color: #000000;
+        padding: 1rem;
+        border-radius: 4rem;
+        box-shadow: 1px 1px 5px gray;
+    } */
+
+    .about p{
+        width: 80%;
+    }
+
+    .skills-container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .skills-container{
+        width: 100%;
+    }
+
+    .skills-card{
+        width: 12em;
+    }
+
+    .skills-card-header h2{
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .hero-section_intro{
+        flex-direction: column;
+    }
+
+    .hero-section_job h1{
+        font-size: 3rem;
+    }
+
+    .about p{
+        font-size: 1.5rem;
+    }
+
+    .project-card-1{
+        height: 200px;
+        width: 28em;
+    }
+
+    .project-card-2{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-card-2-cards{
+        height: 200px;
+        width: 28em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about_intro{
+        flex-direction: column;
+    }
+
+    .project-card-1{
+        height: 200px;
+        width: 22em;
+    }
+    .project-card-2-cards{
+        height: 200px;
+        width: 22em;
+    }
+
+    .skills-card{
+        width: 10em;
+    }
+
+    .skills-card-header h2{
+        font-size: 1.2em;
+    }
+
+    .email p{
+        display: none;
+    }
+}
 
