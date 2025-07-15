@@ -18,18 +18,24 @@ body{
     overflow-y: scroll;
 }
 
-.padding{
-    padding: 0 24rem;
-}
-
 .flex{
     display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.flex-column{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
 }
 
 h1{
     font-size: 80px;
 }
 
+/* NAVBAR */
 .active{
     padding: 1rem 1.5rem;
     width: 4rem;
@@ -65,9 +71,8 @@ nav{
     font-size: 1rem;
     background-color: #ffff;
     box-shadow: 1px 1px 5px gray;
-    border-radius: 20rem;
-    width: 100%;
-    z-index: 1000;
+    border-radius: 5rem;
+    width: min(155rem, 100%);
 }
 
 nav a{
@@ -114,6 +119,7 @@ nav a{
     }
 }
 
+/* HERO SECTION */
 .full-screen{
     display: flex;
     flex-direction: column;
@@ -200,6 +206,117 @@ nav a{
     width: 60%;
 }
 
+/* SKILLS */
+.skills > h2{
+    font-size: 2em;
+    color: #358753;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+}
+
+.skills-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 60%;
+    padding-bottom: 2rem;
+}
+
+.skills-card{
+    background-color: #358753;
+    width: 16em;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    color: white;
+    box-shadow: 2px 2px 2px gray,
+                -2px -2px 2px rgb(187, 187, 187);
+}
+
+.skills-card i{
+    font-size: 2.5em;
+}
+
+.skills-card-header{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding-bottom: 0.8em;
+}
+
+.skills-card-header h2:nth-of-type(2){
+    margin-left: auto;
+}
+
+.skills-card-header h2{
+    font-size: 2em;
+}
+
+.skills-card_outerline{
+    background-color: white;
+    width: 100%;
+    height: 1.4em;
+    border-radius: 1em;
+    display: flex;
+}
+
+.skills-card_innerline{
+    background-color: #358753;
+    width: calc(90% - 0.3em);
+    height: 0.8em;
+    align-self: center;
+    border-radius: 1rem;
+    margin-left: 0.3em;
+}
+
+.skills-card img{
+    width:2.5em;
+}
+
+/* PROJECTS */
+.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-card-1{
+    height: 530px;
+    width: 364px;
+    background-color: #358753;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: start;
+    color: white;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.project-card-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project-card-2-cards{
+    background-color: #358753;
+    width: 232px;
+    height: 232px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: start;
+    color: white;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+/* CONTACT */
 .email{
     display: flex;
     justify-content: center;

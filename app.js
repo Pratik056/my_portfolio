@@ -44,7 +44,7 @@ const copyLine = document.querySelector('.email-address');
 copyLine.addEventListener('click', () => {
   navigator.clipboard.writeText(copyLine.textContent)
     .then(() => {
-      copyLine.textContent = "Copied";
+      copyLine.textContent = "Copied!!!";
       setTimeout(()=>{
         copyLine.textContent = 'pratiktamrakar56@gmail.com';
       }, 1000);
