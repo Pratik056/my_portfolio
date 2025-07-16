@@ -21,14 +21,14 @@
     </nav>
 
     <div class="hero-section full-screen hidden" id="home">
-        <div class="hero-section_intro">
+        <div class="hero-section_intro hidden">
             <h1>Hey, I'm</h1>
-            <img src="img/rounded_rectangle.png" alt="rounded rectangle">
+            <img src="img/rounded_rectangle.png" class="hidden" alt="rounded rectangle">
             <h1>Pratik</h1>
         </div>
         <div class="hero-section_job">
-            <h1>ui/ux designer &</h1>
-            <h1>frontend developer</h1>
+            <h1 class="hidden">ui/ux designer &</h1>
+            <h1 class="hidden">frontend developer</h1>
         </div>
         <div class="star">
             <img src="img/star.png" alt="stars" id="star1">
@@ -47,10 +47,10 @@
             <img src="img/rounded_rectangle.png" alt="rounded rectangle">
             <h1>World</h1>
         </div>
-        <p>
+        <p class="hidden">
             I'm an aspiring UI/UX designer and frontend developer with a passion for crafting clean, user-friendly digital experiences. I enjoy combining design and code to create intuitive, responsive interfaces that look great and work seamlessly.
             Always learning and exploring new tools, I'm focused on building accessible, meaningful products that put users first.
-        </p class="padding">
+        </p>
         <div class="star">
             <img src="img/star.png" alt="stars" id="star1">
             <img src="img/star.png" alt="stars" id="star2">
@@ -63,7 +63,7 @@
         <h2>Developer Skills</h2>
 
         <div class="skills-container">
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <i class="fa-brands fa-html5"></i>
                     <h2>HTML</h2>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <i class="fa-brands fa-css3-alt"></i>
                     <h2>CSS</h2>
@@ -85,36 +85,36 @@
                 </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <i class="fa-brands fa-square-js"></i>
                     <h2>Javascript</h2>
                     <h2>70%</h2>
                 </div>
                 <div class="skills-card_outerline">
-                    <div class="skills-card_innerline"></div>
+                    <div class="skills-card_innerline" style="width: 70%;"></div>
                 </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <i class="fa-brands fa-react"></i>
                     <h2>React js</h2>
                     <h2>80%</h2>
                 </div>
                 <div class="skills-card_outerline">
-                    <div class="skills-card_innerline"></div>
+                    <div class="skills-card_innerline" style="width: 80%;"></div>
                 </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <img src="img\nextjs.png" alt="">
                     <h2>Next js</h2>
                     <h2>80%</h2>
                 </div>
                 <div class="skills-card_outerline">
-                    <div class="skills-card_innerline"></div>
+                    <div class="skills-card_innerline" style="width: 80%;"></div>
                 </div>
             </div>
         </div>
@@ -122,56 +122,55 @@
         <h2>Designer Skills</h2>
         <div class="skills-container">
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <i class="fa-brands fa-figma"></i>
                     <h2>Figma</h2>
                     <h2>80%</h2>
                 </div>
                 <div class="skills-card_outerline">
-                    <div class="skills-card_innerline"></div>
+                    <div class="skills-card_innerline" style="width: 80%;"></div>
                 </div>
             </div>
 
-            <div class="skills-card">
+            <div class="skills-card hidden">
                 <div class="skills-card-header">
                     <img src="img\photoshop.png" alt="">
                     <h2>Photoshop</h2>
                     <h2>80%</h2>
                 </div>
                 <div class="skills-card_outerline">
-                    <div class="skills-card_innerline"></div>
+                    <div class="skills-card_innerline" style="width: 80%;"></div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="project full-screen hidden" id="projects">
         <h1>Projects</h1>
         <div class="project-container flex">
-            <div class="project-card-1">
+            <div class="project-card-1 hidden">
                 <h3>Overspeeding Surveillance using YOLO & RCNN</h3>
                 <img src="img\project-arrow.png" alt="">
             </div>
 
             <div class="project-card-2">
-                <div class="project-card-2-cards">
+                <div class="project-card-2-cards hidden">
                     <h3>title 1</h3>
                     <img src="img\project-arrow.png" alt="">
                 </div>
 
-                <div class="project-card-2-cards">
+                <div class="project-card-2-cards hidden">
                     <h3>title 2</h3>
                     <img src="img\project-arrow.png" alt="">
                 </div>
 
-                <div class="project-card-2-cards">
+                <div class="project-card-2-cards hidden">
                     <h3>title 3</h3>
                     <img src="img\project-arrow.png" alt="">
                 </div>
 
-                <div class="project-card-2-cards">
+                <div class="project-card-2-cards hidden">
                     <h3>title 4</h3>
                     <img src="img\project-arrow.png" alt="">
                 </div>
@@ -186,9 +185,9 @@
         </div>
 
         <div class="socials">
-            <a href="https://github.com/Pratik056"><i class="fa-brands fa-github"></i></a>
-            <i class="fa-brands fa-behance"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
+            <a href="https://github.com/Pratik056"><i class="fa-brands fa-github hidden"></i></a>
+            <i class="fa-brands fa-behance hidden"></i>
+            <i class="fa-brands fa-linkedin-in hidden"></i>
         </div>
     </div>
     
