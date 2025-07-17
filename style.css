@@ -37,6 +37,7 @@ h1{
     min-height: 100vh;
     scroll-snap-align: start;
     text-align: center;
+    padding: 2rem 0;
 }
 
 .hidden{
@@ -45,6 +46,17 @@ h1{
     transition: all 0.8s ease;
 }
 .show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animationHidden{
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: all 1s ease;
+}
+
+.animationShow{
     opacity: 1;
     transform: translateX(0);
 }
@@ -164,6 +176,10 @@ nav i{
     transition-delay: 400ms;
 }
 
+.about_intro img, .hero-section_intro img{
+        transition-delay: 200ms;
+    }
+
 .star{
     display: flex;
     gap: 1rem;
@@ -173,12 +189,15 @@ nav i{
 #star1{
     animation: star-rotate 6s linear infinite;
     mix-blend-mode: darken;
+    transition-delay: 400ms;
 }
 #star2{
     animation: star-rotate 6s linear 1.5s infinite;
+    transition-delay: 300ms;
 }
 #star3{
     animation: star-rotate 6s linear 3s infinite;
+    transition-delay: 200ms;
 }
 @keyframes star-rotate{
     0%{
@@ -376,6 +395,7 @@ nav i{
 
 .email h2{
     cursor: pointer;
+    color: #358753;
 }
 
 .email:hover{
@@ -410,7 +430,7 @@ nav i{
 }
 
 .socials i:nth-child(2){
-    transition-delay: 400ms;
+    transition-delay:400ms;
 }
 
 .socials i:nth-child(3){
@@ -478,7 +498,7 @@ nav i{
 }
 
 @media screen and (max-width: 600px) {
-    .hero-section_intro{
+    .hero-section_intro , .about_intro{
         flex-direction: column;
     }
 
@@ -490,22 +510,30 @@ nav i{
         font-size: 1.5rem;
     }
 
-    .project-card-1{
-        height: 200px;
-        width: 28em;
-    }
-
     .project-card-2{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .project-card-1{
+        height: 200px;
+        width: 25em;
+    }
+
     .project-card-2-cards{
         height: 200px;
-        width: 28em;
+        width: 25em;
     }
+
 }
 
 @media screen and (max-width: 510px) { 
+    .about_intro img, .hero-section_intro img{
+        height: 3rem;
+    }
+
+    #star1, #star2, #star3{
+        height: 2.5rem;
+    }
 
     h1{
         font-size: 3.2rem;

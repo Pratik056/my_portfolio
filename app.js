@@ -18,6 +18,7 @@ arrows.forEach(arrow => arrow.addEventListener('click', () => {
   // }
 }));
 
+//section observer + nav active
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(`${entry.target.id}`)
@@ -32,12 +33,25 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('show');
     }
   });
-},{
-  threshold: 0.6
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+//Element animation
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('animationShow');
+    } else {
+      entry.target.classList.remove('animationShow')
+    }
+  })
+});
+
+const animationHidden = document.querySelectorAll('.animationHidden');
+animationHidden.forEach((el) => observer2.observe(el));
 
 const copyLine = document.querySelector('.email-address');
 
