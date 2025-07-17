@@ -412,7 +412,7 @@ nav i{
 .socials{
     display: flex;
     gap: 1rem;
-    padding: 2rem;
+     padding: 2rem;
 }
 
 .socials i{

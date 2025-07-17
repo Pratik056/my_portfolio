@@ -12,14 +12,14 @@ navbars.forEach(navbar => navbar.addEventListener('click',changeNav));
 arrows.forEach(arrow => arrow.addEventListener('click', () => {
   navbars.forEach(navbar => navbar.classList.remove('active'));
 
- document.querySelector('a.navbar[href="#about"]').classList.add('active');
-  // if (aboutLink) {
-  //   aboutLink.classList.add('active');
-  // }
+ const aboutLink = document.querySelector('a.navbar[href="#about"]');
+  if (aboutLink) {
+    aboutLink.classList.add('active');
+  }
 }));
 
 //section observer + nav active
-const observer = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(`${entry.target.id}`)
     if (entry.isIntersecting) {
@@ -34,11 +34,11 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 },{
-  threshold: 0.7
+  threshold: 0.3
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+hiddenElements.forEach((el) => observer1.observe(el));
 
 
 //Element animation
