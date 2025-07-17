@@ -405,6 +405,10 @@ nav i{
     transition: ease-in-out 0.3s ;
 }
 
+.email h2:hover{
+    color: white;
+}
+
 .socials{
     display: flex;
     gap: 1rem;
