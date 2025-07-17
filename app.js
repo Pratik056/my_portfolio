@@ -33,6 +33,8 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('show');
     }
   });
+},{
+  threshold: 0.7
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
@@ -48,6 +50,8 @@ const observer2 = new IntersectionObserver((entries) => {
       entry.target.classList.remove('animationShow')
     }
   })
+},{
+  threshold:0.6
 });
 
 const animationHidden = document.querySelectorAll('.animationHidden');
