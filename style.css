@@ -61,6 +61,10 @@ h1{
     transform: translateX(0);
 }
 
+a{
+    text-decoration: none;
+}
+
 /* NAVBAR */
 .active{
     padding: 1rem 1.5rem;
@@ -111,7 +115,7 @@ nav a{
 .arrow{
     position: relative;
     animation: 3s down linear infinite;
-    bottom: -12rem;
+    bottom: -20vh;
     mix-blend-mode: darken;
     cursor: pointer;
     width: 3rem;
@@ -178,7 +182,7 @@ nav i{
 
 .about_intro img, .hero-section_intro img{
         transition-delay: 200ms;
-    }
+}
 
 .star{
     display: flex;
