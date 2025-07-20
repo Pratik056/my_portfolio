@@ -302,7 +302,7 @@ nav i{
     margin-left: 0.3em;
 }
 
-.skills-card img{
+.skills-card img, svg{
     width:2.5em;
 }
 
