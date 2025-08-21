@@ -590,3 +590,9 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid #39995c;
   border-radius: 1rem;
 }
+
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
