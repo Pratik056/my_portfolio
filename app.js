@@ -68,3 +68,58 @@ copyLine.addEventListener('click', () => {
       }, 1000);
     })
 });
+
+// one-section-at-a-time smooth scrolling
+const sections = Array.from(document.querySelectorAll('.full-screen'));
+let scrollLock = false;
+
+function getCurrentSectionIndex() {
+  const viewportMiddle = window.scrollY + window.innerHeight / 2;
+  let closestIndex = 0;
+  let smallestDistance = Infinity;
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    const sectionMiddle = window.scrollY + rect.top + rect.height / 2;
+    const distance = Math.abs(sectionMiddle - viewportMiddle);
+    if (distance < smallestDistance) {
+      smallestDistance = distance;
+      closestIndex = index;
+    }
+  });
+  return closestIndex;
+}
+
+function scrollToSection(index) {
+  if (index < 0 || index >= sections.length) return;
+  scrollLock = true;
+  sections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => { scrollLock = false; }, 700);
+}
+
+window.addEventListener('wheel', (e) => {
+  if (sections.length === 0) return;
+  if (scrollLock) { e.preventDefault(); return; }
+  const delta = e.deltaY;
+  if (Math.abs(delta) < 10) return; // ignore micro scrolls
+  const current = getCurrentSectionIndex();
+  const target = Math.max(0, Math.min(sections.length - 1, current + (delta > 0 ? 1 : -1)));
+  if (target !== current) {
+    e.preventDefault();
+    scrollToSection(target);
+  }
+}, { passive: false });
+
+window.addEventListener('keydown', (e) => {
+  if (sections.length === 0) return;
+  if (scrollLock) { e.preventDefault(); return; }
+  const keysDown = ['ArrowDown', 'PageDown', ' '];
+  const keysUp = ['ArrowUp', 'PageUp'];
+  const current = getCurrentSectionIndex();
+  if (keysDown.includes(e.key)) {
+    e.preventDefault();
+    scrollToSection(Math.min(sections.length - 1, current + 1));
+  } else if (keysUp.includes(e.key)) {
+    e.preventDefault();
+    scrollToSection(Math.max(0, current - 1));
+  }
+});
