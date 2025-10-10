@@ -69,6 +69,30 @@ copyLine.addEventListener('click', () => {
     })
 });
 
+// Animate skills progress bars within their container
+const progressBars = Array.from(document.querySelectorAll('.skills-card_innerline'));
+progressBars.forEach((bar) => {
+  const parent = bar.parentElement;
+  if (!parent) return;
+  const targetPercent = Math.max(0, Math.min(100, Math.round((bar.offsetWidth / parent.clientWidth) * 100)));
+  bar.dataset.targetWidth = `${targetPercent}%`;
+  bar.style.width = '0%';
+});
+
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const bar = entry.target;
+    if (entry.isIntersecting) {
+      const target = bar.dataset.targetWidth || '90%';
+      bar.style.width = target;
+    } else {
+      bar.style.width = '0%';
+    }
+  });
+}, { threshold: 0.5 });
+
+progressBars.forEach((bar) => progressObserver.observe(bar));
+
 // one-section-at-a-time smooth scrolling
 const sections = Array.from(document.querySelectorAll('.full-screen'));
 let scrollLock = false;

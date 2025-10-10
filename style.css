@@ -291,6 +291,7 @@ nav i{
     height: 1.4em;
     border-radius: 1em;
     display: flex;
+    overflow: hidden;
 }
 
 .skills-card_innerline{
@@ -300,6 +301,12 @@ nav i{
     align-self: center;
     border-radius: 1rem;
     margin-left: 0.3em;
+    transition: width 1s ease;
+}
+
+/* Keep progress bars from sliding out before width animation */
+.skills-card_innerline.animationHidden{
+    transform: none;
 }
 
 .skills-card img, svg{
