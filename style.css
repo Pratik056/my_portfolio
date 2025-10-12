@@ -17,6 +17,7 @@
 body{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    background-color: #f1efee;
 }
 
 .flex{
@@ -304,7 +305,6 @@ nav i{
     transition: width 1s ease;
 }
 
-/* Keep progress bars from sliding out before width animation */
 .skills-card_innerline.animationHidden{
     transform: none;
 }
