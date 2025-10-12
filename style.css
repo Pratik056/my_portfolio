@@ -218,10 +218,6 @@ nav i{
 
 /* ABOUT */
 
-.about{
-    background-color: #fcfcfc;
-}
-
 .about_intro{
     display: flex;
     align-items: center;
