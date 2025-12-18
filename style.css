@@ -441,11 +441,15 @@ nav i{
 }
 
 .socials i:nth-child(2){
-    transition-delay:400ms;
+    transition-delay: 400ms;
 }
 
 .socials i:nth-child(3){
     transition-delay: 600ms;
+}
+
+.socials i:nth-child(4){
+    transition-delay: 800ms;
 }
 
 /* RESPONSIVE */
